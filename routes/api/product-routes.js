@@ -31,7 +31,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// POST a new product
+
 router.post('/', async (req, res) => {
   try {
     let newProduct;
@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
         product_name: 'Default Product Name',
         price: 0.00,
         stock: 10,
-        category_id: 1 // Default category_id
+        category_id: 1 
       });
     }
 
@@ -62,7 +62,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// PUT (update) a product by ID
+
 router.put('/:id', async (req, res) => {
   try {
     const updatedProduct = await Product.update(req.body, {
@@ -82,7 +82,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// DELETE a product by ID
+
 router.delete('/:id', async (req, res) => {
   try {
     const deletedProduct = await Product.destroy({
